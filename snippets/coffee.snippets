@@ -89,7 +89,7 @@ snippet ##
 snippet desc
 	# ${1:Specification}
 
-describe '${2:Model or When ...}', ->
+	describe '${2:Model or When ...}', ->
 	${3}
 	return
 		
@@ -140,3 +140,42 @@ snippet expcallw
 
 snippet expncallw
 	expect(${1:predicate}).wasNotCalledWith ${2:arguments}
+
+## Backbone.js coffee-script snippets
+##
+## controller
+snippet con
+	class App.Controllers.${1:classname} extends Backbone.Controller
+
+		routes:
+			'${2:route}': '${3:function}'
+		
+		$3: ->
+				${4:#function stuff here...}
+
+## model
+snippet mod
+	class App.Models.${1:name} extends Backbone.Model
+		
+		${2}
+
+## view
+snippet view
+	class App.Views.${1:name} extends Backbone.View
+	
+		initialize: ->
+			@render()
+
+		render: ->
+			$(this.el).html(JST.${2:template}(model: @model))
+			${3}
+			@
+
+## collection
+snippet col
+	class App.Collections.${1:name} extends Backbone.Collection
+
+		initialize: ->
+
+		url: '${2:url}'
+

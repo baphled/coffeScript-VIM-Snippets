@@ -14,3 +14,7 @@ Clone this repo in some where:
     $ cp snippets/coffee.snippets ~/.vim/snippets/
 
 Then restart your VIM
+
+
+##additions
+added support for backbone.js
